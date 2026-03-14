@@ -1,0 +1,182 @@
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --accent: #58a6ff;
+  --accent-hover: #79c0ff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.nav-brand {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a { color: var(--text-muted); font-size: 0.875rem; }
+.nav-links a:hover { color: var(--text); text-decoration: none; }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+h1 { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2.5rem 0 0.75rem;
+  color: var(--text);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 { font-size: 0.95rem; font-weight: 600; margin: 1.25rem 0 0.4rem; color: var(--text); }
+
+p { color: var(--text-muted); margin-bottom: 1rem; }
+ul, ol { color: var(--text-muted); padding-left: 1.5rem; margin-bottom: 1rem; }
+li { margin-bottom: 0.35rem; }
+
+.tagline { color: var(--text-muted); font-size: 1.15rem; margin-bottom: 2.5rem; max-width: 520px; }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.feature {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.feature-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+.feature h3 { margin: 0 0 0.4rem; font-size: 0.9rem; border: none; padding: 0; }
+.feature p { font-size: 0.85rem; margin: 0; }
+
+.badge-placeholder {
+  display: inline-block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.divider { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+}
+.contact-box p { margin: 0; }
+
+.steps { counter-reset: steps; list-style: none; padding: 0; margin: 1rem 0; }
+.steps li {
+  counter-increment: steps;
+  padding: 0.85rem 0 0.85rem 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.steps li:last-child { border-bottom: none; }
+.steps li::before {
+  content: counter(steps);
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.7rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.warning-box {
+  background: var(--surface);
+  border: 1px solid #f85149;
+  border-left: 3px solid #f85149;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1.25rem 0;
+}
+.warning-box p { margin: 0; color: var(--text-muted); }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+footer a { color: var(--text-muted); }
+footer a:hover { color: var(--text); }
+
+.effective-date {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .nav-links { gap: 1rem; }
+  h1 { font-size: 1.75rem; }
+  .features { grid-template-columns: 1fr 1fr; }
+  .container { padding: 2rem 1rem 3rem; }
+}
+@media (max-width: 400px) {
+  .features { grid-template-columns: 1fr; }
+}
