@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verified — Tarmac Log</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    .callback-container {
+      text-align: center;
+      padding: 4rem 1rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .callback-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    .callback-container h1 {
+      margin-bottom: 0.5rem;
+    }
+    .callback-container p {
+      color: #666;
+      line-height: 1.6;
+    }
+    .open-app-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .open-app-btn:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-brand">Tarmac Log</a>
+  </nav>
+
+  <div class="callback-container">
+    <div class="callback-icon">&#9989;</div>
+    <h1>Email Verified</h1>
+    <p>Your email has been verified successfully. Open the Tarmac Log app to sign in and start logging your flights.</p>
+    <a href="com.hanrich.logbook://login-callback" class="open-app-btn">Open Tarmac Log</a>
+    <p style="margin-top: 2rem; font-size: 0.85rem;">
+      If the app does not open automatically, launch Tarmac Log from your home screen and sign in with your verified email.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Co-Pilot Labs &nbsp;&middot;&nbsp;
+      <a href="/privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+      <a href="/terms">Terms of Use</a> &nbsp;&middot;&nbsp;
+      <a href="/support">Support</a>
+    </p>
+  </footer>
+
+  <script>
+    // Attempt to open the app automatically via the custom URL scheme.
+    // On mobile, this will launch the app if installed.
+    (function() {
+      var appUrl = 'com.hanrich.logbook://login-callback' + window.location.hash;
+      window.location.href = appUrl;
+    })();
+  </script>
+</body>
+</html>
