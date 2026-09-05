@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
   <title>Email Verified — Tarmac Log</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../style.css">
@@ -43,10 +44,10 @@
   </nav>
 
   <div class="callback-container">
-    <div class="callback-icon">&#9989;</div>
-    <h1>Email Verified</h1>
-    <p>Your email has been verified successfully. Open the Tarmac Log app to sign in and start logging your flights.</p>
-    <a href="com.hanrich.logbook://login-callback" class="open-app-btn">Open Tarmac Log</a>
+    <div class="callback-icon" id="callback-icon">&#9989;</div>
+    <h1 id="callback-heading">Email Verified</h1>
+    <p id="callback-body">Your email has been verified successfully. Open the Tarmac Log app to sign in and start logging your flights.</p>
+    <a href="com.hanrich.logbook://verify-callback" class="open-app-btn" id="open-app-btn">Open Tarmac Log</a>
     <p style="margin-top: 2rem; font-size: 0.85rem;">
       If the app does not open automatically, launch Tarmac Log from your home screen and sign in with your verified email.
     </p>
@@ -61,10 +62,49 @@
   </footer>
 
   <script>
-    // Attempt to open the app automatically via the custom URL scheme.
-    // On mobile, this will launch the app if installed.
-    (function() {
-      var appUrl = 'com.hanrich.logbook://login-callback' + window.location.hash;
+    // Hand the Supabase auth payload back to the app via the custom URL scheme.
+    //
+    // The host MUST be `verify-callback`, not `login-callback`: on Android the
+    // `login-callback` host belongs to flutter_web_auth_2's CallbackActivity,
+    // which drops the URI when no OAuth session is in flight, so the app never
+    // sees it.
+    //
+    // BOTH `search` and `hash` must be forwarded. The app is a PKCE client, so
+    // the payload it needs is `?code=…` in the QUERY STRING; the fragment
+    // carries implicit-flow tokens and `#error_description=…`. Forwarding only
+    // the hash (as this page used to) opens the app with nothing to act on —
+    // which looks exactly like success from the outside.
+    (function () {
+      var appUrl = 'com.hanrich.logbook://verify-callback'
+        + window.location.search
+        + window.location.hash;
+
+      // The manual fallback must carry the same payload as the automatic
+      // redirect — otherwise a user whose scripted navigation is blocked (some
+      // in-app browsers, insecure origins) can never verify at all.
+      var button = document.getElementById('open-app-btn');
+      if (button) {
+        button.href = appUrl;
+      }
+
+      // Supabase reports failures (expired link, link already used) as
+      // `error_description` in either the query or the fragment. Say so rather
+      // than claiming success.
+      var params = new URLSearchParams(window.location.search);
+      var hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+      var errorDescription = params.get('error_description')
+        || hashParams.get('error_description');
+
+      if (errorDescription) {
+        document.getElementById('callback-icon').innerHTML = '&#9888;';
+        document.getElementById('callback-heading').textContent = 'Verification Failed';
+        document.getElementById('callback-body').textContent = errorDescription;
+        document.title = 'Verification Failed — Tarmac Log';
+        return;
+      }
+
+      // Attempt to open the app automatically. On mobile this launches the app
+      // if it is installed.
       window.location.href = appUrl;
     })();
   </script>
