@@ -4,9 +4,9 @@
 
 ## Tarmac Log
 
-Tarmac Log is an electronic pilot logbook for iPhone (App Store) and Android (Google Play). It is offline-first: every flight is written to the device first and synced afterwards, so logging, editing and browsing work with no connection, and changes sync themselves once the phone is back online. The logbook syncs privately to the user's account and restores on any device they sign in to.
+Tarmac Log is an electronic (digital) pilot logbook for iPhone (App Store) and Android (Google Play). It is offline-first: every flight is written to the device first and synced afterwards, so logging, editing and browsing work with no connection, and changes sync themselves once the phone is back online. The logbook syncs privately to the user's account and restores on any device they sign in to.
 
-Features: flight entry covering route, times, landings, approaches and crew; an aircraft list where each aircraft has a low-poly icon matched to its kind (single, twin, turboprop, jet or helicopter); running totals by aircraft type, PIC, dual, night, instrument and cross-country; and a SACAA-format A4 landscape PDF logbook export for any date range, with a cover page, the full column-by-column spread and totals carried forward across pages.
+Features: flight entry covering route, times, landings, approaches and crew; an aircraft list where each aircraft has a low-poly icon matched to its kind (single, twin, turboprop, jet or helicopter); running totals by aircraft type, PIC, dual, night, instrument and cross-country; and an A4 landscape PDF logbook export in the South African Civil Aviation Authority (SACAA) format for any date range, with a cover page, the full column-by-column spread and totals carried forward across pages.
 
 Plans: Free lets you log up to 3 flights and set up your aircraft, crew and airports. Pro, an optional subscription purchased in the app, adds unlimited flights and SACAA-format PDF logbook export.
 
