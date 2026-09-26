@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarmac Log — Offline Pilot Logbook for iPhone and Android</title>
+  <meta name="description" content="Offline-first pilot logbook for iPhone and Android. Log flights anywhere — Tarmac Log saves on your device and syncs when you're back online.">
+  <link rel="canonical" href="https://copilotlabs.dev/tarmaclog/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#08101A">
+  <meta name="apple-itunes-app" content="app-id=6756934482">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Co-Pilot Labs">
+  <meta property="og:title" content="Tarmac Log — Offline Pilot Logbook for iPhone and Android">
+  <meta property="og:description" content="Your logbook shouldn't need a signal. Tarmac Log saves every flight on your device and syncs itself when you're back online.">
+  <meta property="og:url" content="https://copilotlabs.dev/tarmaclog/">
+  <meta property="og:image" content="https://copilotlabs.dev/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tarmac Log — offline-first pilot logbook">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tarmac Log — Offline Pilot Logbook for iPhone and Android">
+  <meta name="twitter:description" content="Your logbook shouldn't need a signal. Tarmac Log saves every flight on your device and syncs itself when you're back online.">
+  <meta name="twitter:image" content="https://copilotlabs.dev/assets/img/og-image.png">
+  <link rel="preload" href="/assets/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Tarmac Log",
+    "description": "Offline-first pilot logbook for iPhone and Android. Every flight is saved on your device first and synced privately to your account when you're back online. Free: log up to 3 flights and set up your aircraft, crew and airports. Pro: unlimited flights and SACAA-format PDF logbook export.",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "TravelApplication",
+    "url": "https://copilotlabs.dev/tarmaclog/",
+    "image": "https://copilotlabs.dev/assets/img/app-icon.png",
+    "screenshot": [
+      "https://copilotlabs.dev/assets/img/screens/01_offline.webp",
+      "https://copilotlabs.dev/assets/img/screens/02_logbook.webp",
+      "https://copilotlabs.dev/assets/img/screens/03_entry.webp",
+      "https://copilotlabs.dev/assets/img/screens/04_aircraft.webp",
+      "https://copilotlabs.dev/assets/img/screens/05_totals.webp",
+      "https://copilotlabs.dev/assets/img/screens/06_export.webp"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "downloadUrl": [
+      "https://apps.apple.com/app/tarmac-log/id6756934482",
+      "https://play.google.com/store/apps/details?id=com.hanrich.logbook"
+    ],
+    "installUrl": [
+      "https://apps.apple.com/app/tarmac-log/id6756934482",
+      "https://play.google.com/store/apps/details?id=com.hanrich.logbook"
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Co-Pilot Labs",
+      "url": "https://copilotlabs.dev/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does it work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Logging, editing and browsing all work with no connection. Changes are saved on your device and sync themselves once you're back online. Signing in and the first sync need a connection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which phones does it run on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tarmac Log runs on iPhone and Android. Download it from the App Store or Google Play."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export my logbook?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with Pro. Tarmac Log generates a SACAA-format A4 landscape PDF for any date range, with a cover page, the full column-by-column spread and totals carried forward across pages. Share it straight to email, print or cloud storage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tarmac Log is free to download. The free plan lets you log up to 3 flights and set up your aircraft, crew and airports. Pro is an optional subscription, purchased in the app, that adds unlimited flights and SACAA-format PDF logbook export."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is my data stored?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every flight is saved on your device first, then synced privately to your account when you're online, so your logbook restores on any device you sign in to."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I delete my account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can delete your account from inside the app, under Settings. Step-by-step instructions are on our <a href=\"https://copilotlabs.dev/delete-account/\">Delete Account page</a>."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav aria-label="Main">
+      <a href="/" class="nav-brand">Co-Pilot Labs</a>
+      <ul class="nav-links">
+        <li><a href="/tarmaclog/" aria-current="page">Tarmac Log</a></li>
+        <li><a href="/support/">Support</a></li>
+        <li><a href="/privacy-policy/">Privacy</a></li>
+        <li><a href="/terms/">Terms</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Offline-first pilot logbook</p>
+        <h1 id="hero-title">Tarmac Log — <span class="accent">the pilot logbook that works without a signal</span></h1>
+        <p class="hero-lead">Your logbook shouldn't need a signal. Log flights on the ramp, in the air, anywhere — Tarmac Log saves instantly on your device and syncs itself when you're back online.</p>
+        <div class="badges">
+          <a class="badge-link" href="https://apps.apple.com/app/tarmac-log/id6756934482"><img class="badge-apple" src="/assets/img/badges/app-store.svg" alt="Download on the App Store" width="144" height="48"></a>
+          <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.hanrich.logbook"><img class="badge-google" src="/assets/img/badges/google-play.png" alt="Get it on Google Play" width="181" height="70"></a>
+        </div>
+        <p class="hero-note">Available on the App Store for iPhone and on Google Play for Android. Free to download.</p>
+      </div>
+      <div class="hero-shot">
+        <img src="/assets/img/screens/02_logbook.webp" alt="Tarmac Log logbook screen: a scrolling list of flight cards, each with a date, route, aircraft registration and flight time in hours and minutes." width="540" height="960" decoding="async" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="features-title">
+      <p class="eyebrow">Features</p>
+      <h2 id="features-title">A pilot logbook that works where you actually fly</h2>
+      <p class="section-lead">Hangars have thick walls. Aprons have no signal. Tarmac Log keeps working the moment you lose a bar.</p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-mark" aria-hidden="true"></span>
+          <h3>Works without a signal</h3>
+          <p>Every flight is written to your device first and synced afterwards, so the app behaves the same in the air, in a hangar or on the taxiway. No spinners. No “couldn't save”.</p>
+        </div>
+        <div class="card">
+          <span class="card-mark" aria-hidden="true"></span>
+          <h3>Log a flight while the engine cools</h3>
+          <p>Route, times, landings, approaches and crew in one form. Aircraft you fly often are one tap away, and totals update as you type.</p>
+        </div>
+        <div class="card">
+          <span class="card-mark" aria-hidden="true"></span>
+          <h3>Your fleet, recognisable at a glance</h3>
+          <p>Every aircraft carries a low-poly icon matched to what it is — single, twin, turboprop, jet or helicopter — so you can pick the right airframe without reading a registration.</p>
+        </div>
+        <div class="card">
+          <span class="card-mark" aria-hidden="true"></span>
+          <h3>SACAA-format PDF export</h3>
+          <p>Generate an A4 landscape PDF for any date range, with a cover page, the full column-by-column spread and totals carried forward across pages.</p>
+        </div>
+        <div class="card">
+          <span class="card-mark" aria-hidden="true"></span>
+          <h3>Totals and currency without the arithmetic</h3>
+          <p>Hours by aircraft type, PIC, dual, night, instrument and cross-country are kept current as you log. Set your primary authority and the breakdowns follow its rules.</p>
+        </div>
+        <div class="card">
+          <span class="card-mark" aria-hidden="true"></span>
+          <h3>Syncs privately across your devices</h3>
+          <p>Your logbook syncs privately to your account and restores on any device you sign in to. It is your record of your flying — not a marketing list.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="shots-title">
+      <p class="eyebrow">Screenshots</p>
+      <h2 id="shots-title">See it in action</h2>
+      <ul class="shots">
+        <li>
+          <figure>
+            <img src="/assets/img/screens/01_offline.webp" alt="Logbook screen listing recent flights with routes, aircraft and times, under the headline “No signal? No problem.”" width="540" height="960" loading="lazy" decoding="async">
+            <figcaption><strong>No signal? No problem.</strong>Every flight saves on your device first, and syncs itself when you land.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="/assets/img/screens/02_logbook.webp" alt="Logbook scrolled back through the months, each flight card showing its date, route and flight time." width="540" height="960" loading="lazy" decoding="async">
+            <figcaption><strong>Your whole logbook, one scroll</strong>A date on every card, and the month follows your thumb through the years.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="/assets/img/screens/03_entry.webp" alt="Edit Flight form with date, aircraft, flight number, origin, route and destination fields, and flight time fields for total, PIC, PICUS, co-pilot and dual." width="540" height="960" loading="lazy" decoding="async">
+            <figcaption><strong>Log it the way you fly it</strong>Route, PIC, co-pilot, dual and more, in one form built for the cockpit.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="/assets/img/screens/04_aircraft.webp" alt="My Aircraft list showing each registration and type next to a low-poly icon of a single, twin, turboprop, jet or helicopter." width="540" height="960" loading="lazy" decoding="async">
+            <figcaption><strong>Know the airframe at a glance</strong>Single, twin, turboprop, jet or rotor: every aircraft gets its own icon.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="/assets/img/screens/05_totals.webp" alt="Summary screen with a period selector and running totals for night, instrument, turbine, multi-engine, PIC, cross-country and landings, plus a breakdown by aircraft type." width="540" height="960" loading="lazy" decoding="async">
+            <figcaption><strong>Totals that keep themselves</strong>Hours by type, PIC, night and instrument, never counted by hand.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="/assets/img/screens/06_export.webp" alt="Export Logbook screen with a date range, the SACAA A4 landscape format and a preview, next to a page of the exported PDF logbook." width="540" height="960" loading="lazy" decoding="async">
+            <figcaption><strong>Your logbook, as a SACAA PDF</strong>SACAA A4 landscape, any date range, totals carried forward across pages.</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="plans-title">
+      <p class="eyebrow">Plans</p>
+      <h2 id="plans-title">Free and Pro</h2>
+      <p class="section-lead">Start free. Upgrade when you need the whole logbook.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <p class="plan-sub">Try it with your next flights</p>
+          <ul>
+            <li>Log up to <span class="mono">3</span> flights</li>
+            <li>Set up your aircraft, crew and airports</li>
+            <li>Works offline, like every plan</li>
+          </ul>
+        </div>
+        <div class="plan plan-pro">
+          <h3>Pro</h3>
+          <p class="plan-sub">For your full logbook</p>
+          <ul>
+            <li>Unlimited flights</li>
+            <li>SACAA-format PDF logbook export</li>
+            <li>Everything in Free</li>
+          </ul>
+        </div>
+      </div>
+      <p class="plans-note">Pro is an optional subscription, purchased in the app.</p>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Does it work offline?</summary>
+          <p>Yes. Logging, editing and browsing all work with no connection. Changes are saved on your device and sync themselves once you're back online. Signing in and the first sync need a connection.</p>
+        </details>
+        <details>
+          <summary>Which phones does it run on?</summary>
+          <p>Tarmac Log runs on iPhone and Android. Download it from the App Store or Google Play.</p>
+        </details>
+        <details>
+          <summary>Can I export my logbook?</summary>
+          <p>Yes, with Pro. Tarmac Log generates a SACAA-format A4 landscape PDF for any date range, with a cover page, the full column-by-column spread and totals carried forward across pages. Share it straight to email, print or cloud storage.</p>
+        </details>
+        <details>
+          <summary>Is it free?</summary>
+          <p>Tarmac Log is free to download. The free plan lets you log up to 3 flights and set up your aircraft, crew and airports. Pro is an optional subscription, purchased in the app, that adds unlimited flights and SACAA-format PDF logbook export.</p>
+        </details>
+        <details>
+          <summary>Where is my data stored?</summary>
+          <p>Every flight is saved on your device first, then synced privately to your account when you're online, so your logbook restores on any device you sign in to.</p>
+        </details>
+        <details>
+          <summary>How do I delete my account?</summary>
+          <p>You can delete your account from inside the app, under Settings. Step-by-step instructions are on our <a href="/delete-account/">Delete Account page</a>.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <img class="cta-icon" src="/assets/img/app-icon.png" alt="Tarmac Log app icon" width="72" height="72" loading="lazy" decoding="async">
+      <h2 id="cta-title">Download Tarmac Log</h2>
+      <p>Free to download on the App Store and Google Play. Your next flight is already waiting to be logged.</p>
+      <div class="badges">
+        <a class="badge-link" href="https://apps.apple.com/app/tarmac-log/id6756934482"><img class="badge-apple" src="/assets/img/badges/app-store.svg" alt="Download on the App Store" width="144" height="48" loading="lazy" decoding="async"></a>
+        <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.hanrich.logbook"><img class="badge-google" src="/assets/img/badges/google-play.png" alt="Get it on Google Play" width="181" height="70" loading="lazy" decoding="async"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Co-Pilot Labs &nbsp;·&nbsp;
+      <a href="/privacy-policy/">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/terms/">Terms of Use</a> &nbsp;·&nbsp;
+      <a href="/support/">Support</a>
+    </p>
+    <p class="footer-legal">App Store and the Apple logo are trademarks of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </footer>
+</body>
+</html>

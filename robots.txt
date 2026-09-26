@@ -1,0 +1,6 @@
+# Co-Pilot Labs — all crawlers, including AI assistants, are welcome.
+User-agent: *
+Allow: /
+Disallow: /auth/
+
+Sitemap: https://copilotlabs.dev/sitemap.xml

@@ -1,0 +1,19 @@
+# Co-Pilot Labs
+
+> Co-Pilot Labs is a small team of people who fly, building focused, offline-first apps for pilots. Its app is Tarmac Log, an offline-first pilot logbook for iPhone and Android.
+
+## Tarmac Log
+
+Tarmac Log is an electronic pilot logbook for iPhone (App Store) and Android (Google Play). It is offline-first: every flight is written to the device first and synced afterwards, so logging, editing and browsing work with no connection, and changes sync themselves once the phone is back online. The logbook syncs privately to the user's account and restores on any device they sign in to.
+
+Features: flight entry covering route, times, landings, approaches and crew; an aircraft list where each aircraft has a low-poly icon matched to its kind (single, twin, turboprop, jet or helicopter); running totals by aircraft type, PIC, dual, night, instrument and cross-country; and a SACAA-format A4 landscape PDF logbook export for any date range, with a cover page, the full column-by-column spread and totals carried forward across pages.
+
+Plans: Free lets you log up to 3 flights and set up your aircraft, crew and airports. Pro, an optional subscription purchased in the app, adds unlimited flights and SACAA-format PDF logbook export.
+
+- [Tarmac Log on the App Store](https://apps.apple.com/app/tarmac-log/id6756934482): iPhone download
+- [Tarmac Log on Google Play](https://play.google.com/store/apps/details?id=com.hanrich.logbook): Android download
+- [Tarmac Log website](https://copilotlabs.dev/tarmaclog/): features, screenshots, plans and FAQ
+- [Support](https://copilotlabs.dev/support/): help and contact
+- [Privacy Policy](https://copilotlabs.dev/privacy-policy/)
+- [Terms of Use](https://copilotlabs.dev/terms/)
+- [Delete your account](https://copilotlabs.dev/delete-account/)
